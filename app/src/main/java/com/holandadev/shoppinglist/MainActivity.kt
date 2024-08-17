@@ -21,14 +21,16 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
         val editText = findViewById<EditText>(R.id.editText)
         button.setOnClickListener {
-
             if (editText.text.isEmpty()) {
                 editText.error = "Fill in the field with a value"
                 return@setOnClickListener
             }
 
             val item = ItemModel(
-                name = editText.text.toString()
+                name = editText.text.toString(),
+                onRemove = {
+                    itemsAdapter.removeItem(it)
+                }
             )
 
             itemsAdapter.addItem(item)
