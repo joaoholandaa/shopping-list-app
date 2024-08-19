@@ -2,8 +2,11 @@ package com.holandadev.shoppinglist
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.holandadev.shoppinglist.data.ItemsDatabase
 
-class ItemsViewModel: ViewModel() {
+class ItemsViewModel(
+    private val database: ItemsDatabase
+): ViewModel() {
     private var items = mutableListOf<ItemModel>()
     val itemsLiveData = MutableLiveData<List<ItemModel>>()
 
