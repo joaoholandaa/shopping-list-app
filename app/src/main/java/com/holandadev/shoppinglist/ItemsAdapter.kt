@@ -9,15 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ItemsAdapter: RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
 
-    private val items = mutableListOf<ItemModel>()
+    private var items = listOf<ItemModel>()
 
-    fun addItem(newItem: ItemModel) {
-        items.add(newItem)
-        notifyDataSetChanged()
-    }
-
-    fun removeItem(item: ItemModel) {
-        items.remove(item)
+    fun updateItems(newItems: List<ItemModel>) {
+        items = newItems
         notifyDataSetChanged()
     }
 
