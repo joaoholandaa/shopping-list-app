@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    val viewModel: ItemsViewModel by viewModels()
+    val viewModel: ItemsViewModel by viewModels {
+        ItemsViewModelFactory(applicationContext)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
