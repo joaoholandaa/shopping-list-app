@@ -21,15 +21,23 @@ class ItemsViewModel(private val database: ItemsDatabase): ViewModel() {
 
     fun addItem(name: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val entity = ItemEntity(id = 0, name = name)
+            val entity = ItemEntity(name = name)
             database.itemsDao().insert(entity)
             fetchAll()}
     }
 
     private suspend fun fetchAll() {
         val result = database.itemsDao().getAll().map {
-            it.toModel(onRemove = {})
+            it.toModel(onRemove = ::removeItem)
         }
         itemsLiveData.postValue(result)
+    }
+
+    private fun removeItem(item: ItemModel) {
+        viewModelScope.launch {
+            val entity = item.toEntity()
+            database.itemsDao().delete(entity)
+            fetchAll()
+        }
     }
 }
