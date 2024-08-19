@@ -14,6 +14,6 @@ interface ItemsDao {
     @Delete
     suspend fun delete(item: ItemEntity): Int
 
-    @Query("select * from itemEntity")
+    @Query("select * from items")
     suspend fun getAll(): List<ItemEntity>
 }
