@@ -1,4 +1,4 @@
-package com.holandadev.shoppinglist
+package com.holandadev.shoppinglist.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

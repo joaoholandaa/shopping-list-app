@@ -1,4 +1,4 @@
-package com.holandadev.shoppinglist
+package com.holandadev.shoppinglist.model
 
 import com.holandadev.shoppinglist.data.ItemEntity
 

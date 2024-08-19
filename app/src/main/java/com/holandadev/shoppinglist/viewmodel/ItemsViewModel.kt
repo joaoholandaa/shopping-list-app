@@ -1,4 +1,4 @@
-package com.holandadev.shoppinglist
+package com.holandadev.shoppinglist.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.holandadev.shoppinglist.data.ItemEntity
 import com.holandadev.shoppinglist.data.ItemsDatabase
 import com.holandadev.shoppinglist.data.toModel
+import com.holandadev.shoppinglist.model.ItemModel
+import com.holandadev.shoppinglist.model.toEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

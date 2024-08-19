@@ -2,7 +2,7 @@ package com.holandadev.shoppinglist.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.holandadev.shoppinglist.ItemModel
+import com.holandadev.shoppinglist.model.ItemModel
 
 @Entity(tableName = "items")
 data class ItemEntity(

@@ -1,14 +1,14 @@
-package com.holandadev.shoppinglist
+package com.holandadev.shoppinglist.ui
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.holandadev.shoppinglist.viewmodel.ItemsViewModel
+import com.holandadev.shoppinglist.viewmodel.ItemsViewModelFactory
+import com.holandadev.shoppinglist.R
 
 class MainActivity : AppCompatActivity() {
 

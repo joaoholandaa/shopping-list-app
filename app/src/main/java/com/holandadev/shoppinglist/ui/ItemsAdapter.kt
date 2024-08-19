@@ -1,4 +1,4 @@
-package com.holandadev.shoppinglist
+package com.holandadev.shoppinglist.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.holandadev.shoppinglist.R
+import com.holandadev.shoppinglist.model.ItemModel
 
 class ItemsAdapter: RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
 
